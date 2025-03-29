@@ -1,11 +1,10 @@
 
-# student data organizer?
+# student data organizer:
 
 ## Descrição:
 Este projeto é um gerenciador de dados de alunos em C, que lê um arquivo CSV contendo informações dos alunos e permite ordenar esses dados de acordo com diferentes critérios, como nome, semestre, turma, período, disciplina, e média final.
 
 ## Estrutura de Arquivos:
-
 A estrutura do projeto é a seguinte:
 
 ```
