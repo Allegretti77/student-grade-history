@@ -81,7 +81,7 @@ As opções de ordenação disponíveis são:
 3. Escolha a opção de ordenação desejada.
 4. O arquivo `saida.csv` será gerado com os dados ordenados.
 
-##Apresentação do projeto:[Link da apresentação](<https://www.youtube.com/watch?v=Dn0TAhRlQbY>)
+## Apresentação do projeto:[Link da apresentação: ](<https://www.youtube.com/watch?v=Dn0TAhRlQbY>)
 
 # Integrantes do grupo:
 - Gabriel Ferreira - RA: 10442043
