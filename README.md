@@ -1,5 +1,5 @@
 
-# student data organizer:
+# Student Data Organizer:
 
 ## Descrição:
 Este projeto é um gerenciador de dados de alunos em C, que lê um arquivo CSV contendo informações dos alunos e permite ordenar esses dados de acordo com diferentes critérios, como nome, semestre, turma, período, disciplina, e média final.
@@ -51,9 +51,9 @@ Ao rodar o programa, ele lerá o arquivo `entrada.csv`, exibirá um menu de opç
 O arquivo de entrada `entrada.csv` deve estar no seguinte formato:
 
 ```
-Gabriel,7.5,A,A,Computação,9.0
-Guilherme,8.5,B,B,Matemática,7.8
-Vinicius,7.8,C,C,Engenharia,8.2
+3,B,M,Gabriel,matemática,8.0
+2,A,N,Guilherme,português,7.3
+3,B,N,Vinicius,geografia,7.6
 ```
 
 - **entrada.csv** contém informações dos alunos, incluindo nome, semestre, turma, período, disciplina, e média final.
