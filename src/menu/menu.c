@@ -9,6 +9,7 @@ void exibirMenu(Aluno *alunos, int quantidade) {
     char entrada[100];
 
     do {
+        // Exibe as opções de ordenação disponíveis
         printf("\nMenu de Ordenação\n");
         printf("1 - Ordenar por Nome\n");
         printf("2 - Ordenar por Semestre\n");
@@ -21,37 +22,36 @@ void exibirMenu(Aluno *alunos, int quantidade) {
             printf("Escolha uma opção: ");
             fgets(entrada, sizeof(entrada), stdin);
 
+            // Valida se a entrada é um número entre 1 e 6
             if (sscanf(entrada, "%d", &opcao) != 1) {
                 printf("Entrada inválida. Digite um número entre 1 e 6.\n");
                 opcao = 0;
             }
         } while (opcao < 1 || opcao > 6);
 
+        // Executa a ordenação correspondente à opção escolhida
         switch (opcao) {
             case 1:
                 ordenarPorNome(alunos, quantidade);
-                salvarCSV("saida.csv", alunos, quantidade);
                 break;
             case 2:
                 ordenarPorSemestre(alunos, quantidade);
-                salvarCSV("saida.csv", alunos, quantidade);
                 break;
             case 3:
                 ordenarPorSemestreTurmaPeriodoDisciplinaNome(alunos, quantidade);
-                salvarCSV("saida.csv", alunos, quantidade);
                 break;
             case 4:
                 ordenarPorDisciplinaMediaFinal(alunos, quantidade);
-                salvarCSV("saida.csv", alunos, quantidade);
                 break;
             case 5:
                 ordenarPorPeriodoSemestreTurmaDisciplinaNome(alunos, quantidade);
-                salvarCSV("saida.csv", alunos, quantidade);
                 break;
             case 6:
-                salvarCSV("saida.csv", alunos, quantidade);
                 printf("Saindo...\n");
                 break;
         }
+
+        // Salva os dados ordenados no arquivo csv após cada operação
+        salvarCSV("saida.csv", alunos, quantidade);
     } while (opcao != 6);
 }
