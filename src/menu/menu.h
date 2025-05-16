@@ -3,6 +3,6 @@
 
 #include "csv_handler.h"
 
-void exibirMenu(Aluno *alunos, int quantidade);
+int exibirMenu(Aluno *alunos, int quantidade);
 
 #endif
