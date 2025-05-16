@@ -54,3 +54,4 @@ dkms.conf
 build/
 student-data-organizer
 saida.csv
+entrada.csv

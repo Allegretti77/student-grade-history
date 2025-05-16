@@ -4,20 +4,24 @@
 #include "csv_handler.h"
 
 int main() {
-    Aluno *alunos;
-    int quantidade;
+    Aluno *alunos = NULL;
+    int quantidade = 0;
+    int continuar = 1;
 
-    // Lê os dados do arquivo csv e armazena no array de alunos
-    alunos = lerCSV("entrada.csv", &quantidade);
-    if (!alunos) {
-        printf("Erro ao ler o arquivo CSV.\n");
-        return 1;
+    while (continuar) {
+        // Lê os dados do arquivo csv e armazena no array de alunos
+        free(alunos);
+        alunos = lerCSV("entrada.csv", &quantidade);
+        if (!alunos) {
+            printf("Aviso: Não foi possível carregar os dados de 'entrada.csv'.\n");
+            alunos = NULL;
+            quantidade = 0;
+        }
+
+        // Exibe o menu e permite escolher uma ação
+        continuar = exibirMenu(alunos, quantidade);
     }
 
-    // Exibe o menu para o usuário escolher um critério de ordenação
-    exibirMenu(alunos, quantidade);
-
-    // Libera a memória alocada para os alunos
     free(alunos);
     return 0;
 }
