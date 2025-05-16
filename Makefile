@@ -1,9 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -I./src -I./src/menu -I./src/csv_handler -I./src/sorter
-LDFLAGS = 
+CFLAGS = -Wall -Wextra -I./src -I./src/menu -I./src/csv_handler -I./src/sorter -I./src/random_data_generator
+LDFLAGS =
 
 SRC_DIR = src
-MODULES_DIRS = menu csv_handler sorter
+MODULES_DIRS = menu csv_handler sorter random_data_generator
 BIN_DIR = bin
 BUILD_DIR = build
 
